@@ -6,6 +6,7 @@
 
 body {
   background-color: #548687;
+  font-family: Arial, sans-serif;
 }
 
 .game {
@@ -20,91 +21,81 @@ body {
 .game h1 {
   color: #d8e2dc;
   font-size: 4rem;
-  margin-bottom: 2rem; /* Add some space below the heading */
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(8rem, 1fr)
-  ); /* Responsive grid layout */
-  gap: 1rem; /* Add gap between grid items */
-  position: relative;
-  margin: 0 auto; /* Center the grid */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .box {
   background-color: #feffbe;
   color: #a7392d;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 500;
-  height: 8rem;
-  width: 8rem;
-  margin: 0;
-  border: 0.1px solid black;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 0 0 10px black;
   cursor: pointer;
-  transition: transform 0.5s; /* Moved transition property here */
+  transition: transform 0.3s ease;
 }
 
 .box:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .reset {
   background-color: black;
   color: #d8e2dc;
   font-weight: 600;
-  height: 2rem;
-  width: 6rem;
+  padding: 10px 20px;
   border: none;
+  border-radius: 5px;
+  margin-top: 20px;
   cursor: pointer;
-  transition: background-color 0.5s; /* Added transition for hover effect */
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%); /* Center the button horizontally */
-}
-
-.reset:hover {
-  background-color: #d8e2dc;
-  color: black;
 }
 
 .left-content {
-  max-width: 25rem; /* Limit the width for smaller screens */
-  position: absolute;
-  top: 50%;
-  left: 2rem;
-  transform: translateY(-50%); /* Center the content vertically */
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .left-content h1 {
   color: #d8e2dc;
-  font-weight: bold;
-  margin-bottom: 1rem; /* Add space between heading and paragraphs */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .left-content p {
-  margin-bottom: 1rem; /* Add space between paragraphs */
+  margin-bottom: 10px;
 }
 
 .left-content img {
-  width: 100%; /* Make the image responsive */
-  max-width: 12rem; /* Limit the maximum width */
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .winmsg {
-  display: none; /* Hide win message by default */
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  font-size: 1.7rem;
-  color: #ffffc7;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-.show {
-  display: block; /* Show win message when needed */
+.hide {
+  display: none;
 }
