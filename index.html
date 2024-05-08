@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="board">
+          <!-- Game board buttons -->
+          <button class="box"></button>
+          <!-- Repeat for all 9 buttons -->
+        </div>
+        <button class="reset">RESET!!</button>
+      </div>
+      <div class="rules">
+        <h2>Rules for Tic-Tac-Toe</h2>
+        <ul>
+          <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+          <li>
+            You are X, your friend is O. Players take turns putting their marks
+            in empty squares.
+          </li>
+          <li>
+            The first player to get 3 of her marks in a row (up, down, across,
+            or diagonally) is the winner.
+          </li>
+          <li>
+            When all 9 squares are full, the game is over. If no player has 3
+            marks in a row, the game ends in a tie.
+          </li>
+        </ul>
+        <img
+          src="./kisspng-tic-tac-toe-board-game-zero-kata-tic-tac-toe-tra-wow-connect-3-1-apk-download-for-windows-1-87-5d0cb9b1581f59.452852861561115057361.png"
+          alt="Tic Tac Toe Board"
+          class="image"
+        />
+      </div>
+    </div>
+    <audio id="winSound" src="./mixkit-audience-light-applause-354.wav"></audio>
+    <audio src="./ting.mp3" id="clicksound"></audio>
+    <img id="winAnimation" src="" alt="Winning Animation" class="hide" />
+    <script src="script.js"></script>
+  </body>
+</html>
